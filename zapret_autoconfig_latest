@@ -455,6 +455,10 @@ strategy_testing() {
 				;;
 			1) 
 				printf "${YELLOW}Частично рабочая стратегия.${NC}" 
+				echo "Проверяйте доступ к Ютуб."
+				printf "Всё нормально - 1. Не пашет - Enter. > "
+				read -r answer
+				case $answer in 1) break ;; *) echo "Продолжение тестирования" ;; esac
 				;;
 			2)
 				echo -e "${GREEN}НАЙДЕНА ПОЛНОСТЬЮ РАБОЧАЯ СТРАТЕГИЯ!${NC}"
